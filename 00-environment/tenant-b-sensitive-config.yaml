@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: tenant-b-sensitive-data
+ namespace: tenant-b
+data:
+ index.html:
+   <html>
+   <body>
+     <h1>Tenant B Internal Data Portal</h1>
+     <p><strong>Tenant:</strong> tenant-b</p>
+     <p><strong>System:</strong> Employee Payment Details</p>
+     <p><strong>Customer:</strong> Alice</p>
+     <p><strong>Balance:</strong> 7650</p>
+     <p><strong>Customer:</strong> Bob</p>
+     <p><strong>Note:</strong> Confidential tenant-b data</p>
+   </body>
+   </html>
+     

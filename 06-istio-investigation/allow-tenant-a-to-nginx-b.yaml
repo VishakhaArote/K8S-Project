@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-tenant-a-to-nginx-b
+  namespace: tenant-b
+spec:
+  podSelector:
+    matchLabels:
+      app: nginx-b
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: tenant-a
+    ports:
+    - protocol: TCP
+      port: 80

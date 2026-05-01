@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-tenant-a-to-nginx-b
+  namespace: tenant-b
+spec:
+  selector:
+    matchLabels:
+      app: nginx-b   
+  action: DENY
+  rules:
+  - from:
+    - source:
+        namespaces: ["tenant-a"]

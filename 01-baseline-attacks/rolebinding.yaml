@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: attacker-binding
+subjects:
+- kind: ServiceAccount
+  name: attacker-sa
+  namespace: tenant-a
+roleRef:
+  kind: ClusterRole
+  name: cross-namespace-role
+  apiGroup: rbac.authorization.k8s.io
