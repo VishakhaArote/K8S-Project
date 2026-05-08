@@ -144,17 +144,10 @@ K8S-Project/
 ├── attacks/
 │   └── Manifests used to reproduce baseline attack scenarios
 │
-├── docs/
-│   ├── ethical-scope.md
-│   ├── limitations.md
-│   └── setup-guide.md
 │
 ├── environment/
 │   └── Baseline tenant workloads and simulated sensitive configuration
 │
-├── evidence/
-│   ├── command-outputs/
-│   └── screenshots/
 │
 ├── istio-investigation/
 │   └── Istio configuration files, lightweight profile, and operational findings
@@ -165,11 +158,6 @@ K8S-Project/
 │   ├── opa-gatekeeper/
 │   └── resource-governance/
 │
-├── validation/
-│   ├── before-hardening-tests.md
-│   ├── after-hardening-tests.md
-│   ├── attack-control-mapping.md
-│   └── performance-metrics.md
 │
 ├── .gitignore
 └── README.md
