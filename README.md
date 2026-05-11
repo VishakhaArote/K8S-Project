@@ -4,7 +4,6 @@
 
 **Implementing Zero Trust in Multi-Tenant Kubernetes: A Policy-as-Code Approach for Enforcing Isolation and Least Privilege**
 
-## Dissertation Context
 
 This repository contains the practical artefact developed for a Master's dissertation in MSc Cyber Security at Dublin Business School.
 
@@ -132,5 +131,17 @@ The investigation showed that service mesh adoption introduces additional operat
 - Additional troubleshooting overhead
 
 As a result, Istio was documented as an operational finding and possible future enhancement rather than the main security enforcement mechanism.
+
+## Conclusion
+
+This artefact demonstrates how Zero Trust principles can be applied to a multi-tenant Kubernetes environment using Kubernetes-native controls and Policy-as-Code.
+
+The baseline testing showed that Kubernetes namespaces alone do not provide strong tenant isolation. Without additional controls, workloads may attempt cross-tenant service access, service discovery, API misuse, privileged execution, HostPath access, and resource abuse.
+
+After hardening, the implemented controls improved the security posture of the cluster. NetworkPolicy restricted cross-tenant communication, RBAC enforced least-privilege access, OPA Gatekeeper blocked insecure workload configurations, and ResourceQuota with LimitRange reduced the impact of resource abuse.
+
+Overall, the project shows that effective Kubernetes security requires a layered approach. No single control is sufficient on its own, but combining network isolation, access control, admission control, and resource governance provides stronger protection for shared Kubernetes environments.
+
+This repository is intended as an educational and research artefact. It is not a production-ready Kubernetes security platform, but it provides a practical example of how Policy-as-Code can support Zero Trust implementation in Kubernetes.
 
 
