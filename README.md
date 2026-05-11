@@ -133,31 +133,4 @@ The investigation showed that service mesh adoption introduces additional operat
 
 As a result, Istio was documented as an operational finding and possible future enhancement rather than the main security enforcement mechanism.
 
-## Repository Structure
 
-```text
-K8S-Project/
-│
-├── architecture/
-│   └── Architecture diagrams and design notes
-│
-├── attacks/
-│   └── Manifests used to reproduce baseline attack scenarios
-│
-│
-├── environment/
-│   └── Baseline tenant workloads and simulated sensitive configuration
-│
-│
-├── istio-investigation/
-│   └── Istio configuration files, lightweight profile, and operational findings
-│
-├── policies/
-│   ├── network/
-│   ├── rbac/
-│   ├── opa-gatekeeper/
-│   └── resource-governance/
-│
-│
-├── .gitignore
-└── README.md
